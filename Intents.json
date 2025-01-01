@@ -1,0 +1,728 @@
+{
+"intents" : [
+    {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "How are you", "What's up"],
+        "responses": ["Hi there", "Hello", "Hey", "I'm fine, thank you", "Nothing much"]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Take care"],
+        "responses": ["Goodbye", "See you later", "Take care"]
+    },
+    {
+        "tag": "thanks",
+        "patterns": ["Thank you", "Thanks", "Thanks a lot", "I appreciate it"],
+        "responses": ["You're welcome", "No problem", "Glad I could help"]
+    },
+    {
+        "tag": "about",
+        "patterns": ["What can you do", "Who are you", "What are you", "What is your purpose"],
+        "responses": ["I am a chatbot", "My purpose is to assist you", "I can answer questions and provide assistance"]
+    },
+    {
+        "tag": "help",
+        "patterns": ["Help", "I need help", "Can you help me", "What should I do"],
+        "responses": ["Sure, what do you need help with?", "I'm here to help. What's the problem?", "How can I assist you?"]
+    },
+    {
+        "tag": "age",
+        "patterns": ["How old are you", "What's your age"],
+        "responses": ["I don't have an age. I'm a chatbot.", "I was just born in the digital world.", "Age is just a number for me."]
+    },
+    {
+        "tag": "weather",
+        "patterns": ["What's the weather like", "How's the weather today"],
+        "responses": ["I'm sorry, I cannot provide real-time weather information.", "You can check the weather on a weather app or website."]
+    },
+    {
+        "tag": "budget",
+        "patterns": ["How can I make a budget", "What's a good budgeting strategy", "How do I create a budget"],
+        "responses": ["To make a budget, start by tracking your income and expenses. Then, allocate your income towards essential expenses like rent, food, and bills. Next, allocate some of your income towards savings and debt repayment. Finally, allocate the remainder of your income towards discretionary expenses like entertainment and hobbies.", "A good budgeting strategy is to use the 50/30/20 rule. This means allocating 50% of your income towards essential expenses, 30% towards discretionary expenses, and 20% towards savings and debt repayment.", "To create a budget, start by setting financial goals for yourself. Then, track your income and expenses for a few months to get a sense of where your money is going. Next, create a budget by allocating your income towards essential expenses, savings and debt repayment, and discretionary expenses."]
+    },
+    {
+        "tag": "credit_score",
+        "patterns": ["What is a credit score", "How do I check my credit score", "How can I improve my credit score"],
+        "responses": ["A credit score is a number that represents your creditworthiness. It is based on your credit history and is used by lenders to determine whether or not to lend you money. The higher your credit score, the more likely you are to be approved for credit.", "You can check your credit score for free on several websites such as Credit Karma and Credit Sesame."]
+    },
+    {
+        "tag" : "difference between RAM (Random Access Memory) and a hard drive in a computer",
+        "patterns":["What is the difference between RAM (Random Access Memory) and a hard drive in a computer?"],
+        "responses": ["RAM (Random Access Memory) is a type of temporary, fast-access memory used by the computer to store data that is actively being used or processed. It allows the CPU to quickly read from and write to this memory, speeding up the computer’s performance. However, RAM is volatile, meaning it loses all data when the computer is turned off.A hard drive (HDD) or solid-state drive (SSD) is a permanent storage device used to store the operating system, applications, and data files. Unlike RAM, a hard drive retains its data even when the computer is powered off. Hard drives are slower than RAM in terms of data access speed, but they offer much larger storage capacities."]
+    },
+    { 
+        "tag" : "equation",
+        "patterns" : ["What is an equation?"],
+        "responses" : ["An equation is a mathematical statement that shows the equality of two expressions by using the '=' sign."]
+    },
+    {
+        "tag" : "programming language",
+        "patterns" : ["What is a programming language?"],
+        "responses" : ["A programming language is a formal language comprising a set of instructions that produce various kinds of output. Examples include Python, Java, and C++."]  
+    },
+    {
+        "tag" : "Python used for",
+        "patterns" : ["What is Python used for?"],
+        "responses" : ["Python is a versatile programming language used for web development, data analysis, artificial intelligence, scientific computing, and more."]
+    },
+    {
+        "tag" : "object-oriented programming",
+        "patterns":["What is object-oriented programming?"],
+        "responses" :  ["Object-oriented programming (OOP) is a programming paradigm based on the concept of objects, which can contain data and code. Popular OOP languages include Java, Python, and C++."]
+    },
+    {
+        "tag" : "functional programming",
+        "patterns" : ["What is functional programming?"],
+        "responses" : ["Functional programming is a programming paradigm where programs are constructed by applying and composing functions. It avoids changing state and mutable data."]
+    },
+    {
+        "tag" : " variables in programming",
+        "patterns" : ["What are variables in programming?"],
+        "responses" : ["Variables are containers for storing data values in a program. Different programming languages have different types of variables."]
+    },
+    {
+        "tag" : " recursion in programming",
+        "patterns" :[ "What is recursion in programming?"],
+        "responses" : ["Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem."]
+    },
+    {
+        "tag" : "loop in programming",
+        "patterns" : ["What is a loop in programming?"],
+        "responses" : ["A loop is a control flow statement that allows code to be executed repeatedly based on a condition. Examples include for loops and while loops."]
+    },
+    {
+        "tag" : "algorithm",
+        "patterns" : ["What is an algorithm?"],
+        "responses" : "An algorithm is a step-by-step procedure or formula for solving a problem."
+    },
+    {
+        "tag" : " debugging",
+        "patterns" : ["What is debugging?"],
+        "responses" : ["Debugging is the process of identifying and fixing errors or bugs in a program."]
+    },
+    { 
+        "tag" : "version control",
+        "patterns" :[ "What is version control?"],
+        "responses" : ["Version control is a system that records changes to a file or set of files over time so that specific versions can be recalled later. Git is a popular version control system."]
+    },
+    {
+        "tag" : "CPU",
+        "patterns" : [ "What is a CPU?"],
+        "responses" : ["A CPU, or Central Processing Unit, is the primary component of a computer that performs most of the processing inside a computer. It is often referred to as the brain of the computer."]
+    },
+    {
+        "tag" : "RAM",
+        "patterns" : ["What is the purpose of the RAM"],
+        " responses" : ["RAM, or Random Access Memory, is a type of computer memory that is used to store data temporarily while a computer is running. It allows for quick access to data and improves system performance."]
+    },
+    {
+        "tag" : "GPU",
+        "patterns" : ["What is a GPU?"],
+        "responses" :[ "A GPU, or Graphics Processing Unit, is a specialized processor designed to accelerate graphics rendering and computational tasks."]
+    },
+    {
+        "tag" : " motherboard",
+        "patterns" : [" what is a motherboard"],
+        "responses" : ["A motherboard is the main printed circuit board (PCB) in a computer. It connects all the components of a computer, including the CPU, RAM, and storage."]
+    },
+    {
+        "tag" : " SSD",
+        "patterns" :[ "What is an SSD"],
+        "responses" :[ "An SSD, or Solid State Drive, is a type of storage device that uses flash memory to store data. It is faster and more durable than traditional hard drives."]
+    },
+    {
+        "tag" : "HDD and SSD",
+        "patterns" :[ "What is the difference between HDD and SSD?"],
+        "responses" : ["HDDs (Hard Disk Drives) use spinning disks to store data, while SSDs (Solid State Drives) use flash memory, making them faster and more reliable."]
+    },
+    {
+        "tag" : "power supply unit (PSU)",
+        "patterns" : ["What is a power supply unit (PSU)?"],
+        "responses" :[ "A PSU, or Power Supply Unit, is a component that supplies power to the components of a computer."]
+    },
+    {
+        "tag" :  "heat sink",
+        "patterns" :[ "What is a heat sink?"],
+        "responses" : ["A heat sink is a device that absorbs and dissipates heat from electronic components, such as the CPU, to keep them cool."]
+    },
+    {
+        "tag" : "input device",
+        "patterns" :[ "What is an input device?"],
+        "responses" : ["An input device is a hardware component used to provide data to a computer, such as a keyboard or mouse."]
+    }, 
+    { 
+        "tag" : "output device",
+        "patterns" : ["What is an output device?"],
+        "responses" : ["An output device is a hardware component used to communicate the results of data processing, such as a monitor or printer."]
+    },
+    { 
+        "tag" : "IP address",
+        "patterns" : ["What is an IP address?"],
+        "responses" : ["An IP address is a unique string of numbers and/or letters assigned to a device that connects to the internet, allowing it to communicate with other devices."]
+    },
+    {
+        "tag" : "IPv4 and IPv6",
+        "patterns" : ["What is the difference between IPv4 and IPv6?"],
+
+        "responses" :["IPv4 uses 32-bit addresses, allowing for about 4.3 billion unique addresses, while IPv6 uses 128-bit addresses, allowing for a vastly larger number of unique addresses."]
+    },
+    {
+        "tag" : "DNS",
+        "patterns" :  ["What is DNS?"],
+        "responses" : ["DNS, or Domain Name System, is a system that translates human-readable domain names (like www.example.com) into IP addresses that computers use to identify each other on a network."]
+    },
+    {
+        "tag" : "router",
+        "patterns" : ["What is the router"],
+        "responses" : ["A router is a networking device that forwards data packets between computer networks. It connects devices within a network and directs traffic efficiently."]
+    },
+    {
+        "tag" : "subnet mask",
+        "patterns" : ["What is a subnet mask?"],
+        "responses" : ["A subnet mask is a number that defines a range of IP addresses available within a network. It is used to divide IP networks into subnetworks."]
+    },
+    { 
+        "tag" :"  MAC address",
+        "patterns" : [ "What is a MAC address?"],
+        "responses" :[ "A MAC address, or Media Access Control address, is a unique identifier assigned to a network interface for communications on the physical network segment."]
+    },
+    {
+        "tag" : " VPN",
+        "patterns" : ["What is a VPN?"],
+        "responses" : ["A VPN, or Virtual Private Network, is a service that encrypts your internet connection and hides your IP address to provide online privacy and security."]
+    },
+    {
+        "tag" : "bandwidth",
+        "patterns" : ["What is bandwidth?"],
+        "responses" : ["Bandwidth is the maximum amount of data that can be transmitted over a network connection in a given amount of time."]
+    },
+    {
+        "tag" : "latency in networking",
+        "patterns" :  ["What is latency in networking?"],
+        "responses" :  ["Latency is the time it takes for data to travel from its source to its destination in a network."]
+    },
+    {
+        "tag" : " protocol in networking",
+        "patterns" : ["What is a protocol in networking?"],
+        "responses" : ["A protocol is a set of rules and standards that allow electronic devices to communicate over a network. Examples include HTTP, FTP, and TCP/IP."]
+    },
+    {
+        "tag" : "database",
+        "patterns" :  ["What is a database?"],
+        "responses": ["A database is an organized collection of data that is stored and accessed electronically. Examples include MySQL, PostgreSQL, and MongoDB."]
+    },
+    {
+        "tag" : "SQL",
+        "patterns" : ["What is SQL?"],
+        "responses" : ["SQL, or Structured Query Language, is a programming language used to manage and manipulate relational databases."]
+    },
+    {
+        "tag" : "NoSQL",
+        "patterns" :  ["What is NoSQL?"],
+        "responses": ["NoSQL refers to a category of databases that do not use the traditional relational database structure. Examples include MongoDB, Cassandra, and Redis."]
+    },
+    { 
+        "tag" : "primary key in a database",
+        "patterns" : ["What is a primary key in a database"],
+        "responses" : ["A primary key is a unique identifier for a record in a database table. It ensures that each record can be uniquely identified."]
+    },
+    {
+        "tag" : "foreign key",
+        "patterns" : ["What is a foreign key"],
+        "responses" : ["A foreign key is a field in a database table that creates a relationship between two tables. It refers to the primary key in another table."]
+    },
+    {
+        "tag" : "database index?",
+        "patterns" : ["What is a database index"],
+        "responses" : ["A database index is a data structure that improves the speed of data retrieval operations on a database table."]
+    },
+    {
+        "tag" : "data normalization",
+        "patterns" : ["What is data normalization"],
+        "responses" : ["Data normalization is the process of organizing data in a database to reduce redundancy and improve data integrity."]
+    },
+    {
+        "tag" : "sine function",
+        "patterns" : ["What is a sine function"],
+        "responses" : ["The sine function relates the ratio of the opposite side to the hypotenuse in a right triangle."]
+    },
+    { 
+        "tag" : "cosine function",
+        "patterns" : ["What is a cosine function"],
+        "responses" : ["The cosine function relates the ratio of the adjacent side to the hypotenuse in a right triangle."]
+    },
+    {
+        "tag" : "tangent function",
+        "patterns" : ["What is a tangent function"],
+        "responses" : ["The tangent function relates the ratio of the opposite side to the adjacent side in a right triangle."]
+    },
+    {
+        "tag"  : "primary trigonometric identities",
+        "patterns" : ["What are the primary trigonometric identities"],
+        "responses" : ["The primary trigonometric identities include: sin^2(x) + cos^2(x) = 1, 1 + tan^2(x) = sec^2(x), and 1 + cot^2(x) = csc^2(x)."]
+    },
+    {
+        "tag" : "unit circle",
+        "patterns" : ["What is the unit circle"],
+        "responses" : ["The unit circle is a circle with a radius of 1 centered at the origin of the coordinate plane, used to define trigonometric functions."]
+    },
+    {
+        "tag" : "angle measured in radians",
+        "patterns" : ["What is an angle measured in radians"],
+        "responses" : ["A radian is a unit of angular measure where one radian is the angle formed when the arc length equals the radius of the circle."]
+    },
+    {
+        "tag" : "law of sines",
+        "patterns" : ["What is the law of sines"],
+        "responses" : ["The law of sines states that in any triangle, the ratios of the length of a side to the sine of its opposite angle are equal."]
+    },
+    {
+        "tag" : "law of cosines",
+        "patterns" : ["What is the law of cosines"],
+        "responses" : ["The law of cosines states that c^2 = a^2 + b^2 - 2ab * cos(C), where C is the angle opposite side c."]
+    },
+    {
+        "tag" : " noun",
+        "patterns" : ["What is a noun?"],
+        "responses" : ["A noun is a word that refers to a person, place, thing, or idea. Examples include 'dog', 'city', and 'happiness'."]
+    },
+    { 
+        "tag" : "types of nouns",
+        "patterns" : [ "What are the types of nouns"],
+        "reponses" : ["The main types of nouns are proper nouns, common nouns, abstract nouns, concrete nouns, countable nouns, and uncountable nouns."]
+    },
+    {
+        "tag" : "a verb and an adjective",
+        "patterns" : ["What is the difference between a verb and an adjective?"],
+        "responses" : ["A verb is an action or state word, such as 'run' or 'is', while an adjective describes a noun, such as 'happy' or 'blue'."]
+    },
+    {
+        "tag" : "pronoun",
+        "patterns" : [ "What is a pronoun"],
+        "responses" : ["A pronoun is a word that takes the place of a noun in a sentence, such as 'he', 'she', 'it', 'they'."]
+    },
+    {
+        "tag" : "synonyms",
+        "patterns" : ["What are synonyms"],
+        "responses" : ["Synonyms are words with the same or similar meanings, such as 'big' and 'large'."]
+    },
+    {
+        "tag" : "sentence",
+        "patterns" : ["What is a sentence"],
+        "responses" : ["A sentence is a group of words that expresses a complete thought. It typically contains a subject and a predicate."]
+    },
+    {
+        "tag" : " types of sentences",
+        "patterns" : ["What are the types of sentences"],
+        "responses" : ["What are the types of sentences?"]
+    },
+    {
+        "tag" :"compound sentence",
+        "patterns" : ["What is a compound sentence?"],
+        "responses" : ["A compound sentence is a sentence that contains two or more independent clauses joined by a coordinating conjunction like 'and', 'but', or 'or'."]
+    },
+    { 
+        "tag" : "an adverb",
+        "patterns" : ["What is an adverb?"],
+        "responses" : ["An adverb is a word that modifies a verb, an adjective, or another adverb. It often answers questions like 'how', 'when', 'where', or 'to what extent'."]
+    },
+    {
+        "tag" : " preposition",
+        "patterns" : ["What is a preposition"],
+        "responses" : ["A preposition is a word that shows the relationship between a noun or pronoun and another word in the sentence, such as 'in', 'on', 'under'."]
+    },
+    { 
+        "tag" : "conjunction",
+        "patterns" : ["What is a conjunction"],
+        "responses" : ["A conjunction is a word used to connect clauses or sentences, such as 'and', 'but', 'or'."]
+    },
+    {
+        "tag" : "interjection",
+        "patterns" : ["What is an interjection"],
+        "responses" : ["An interjection is a word or phrase that expresses emotion or exclamation, such as 'Wow!', 'Oh!', or 'Hurray!'."]
+    },
+    {
+        "tag" :  "homophones",
+        "patterns" : ["What are homophones"],
+        "responses" : ["Homophones are words that sound the same but have different meanings and spellings, such as 'bare' and 'bear'."]
+    },
+    { 
+        "tag" : "verb tense" ,
+        "patterns" : ["What is verb sentense"],
+        "response" : ["A verb tense indicates the time of the action or state of being, such as past, present, or future."]
+    },
+    {
+        "tag" : "subject-verb agreement",
+        "patterns" : ["What is subject-verb agreement?"],
+        "responses" : ["Subject-verb agreement means that the subject and verb in a sentence must both be singular or both be plural."]
+    },
+    { 
+        "tag" : "a prefix",
+        "patterns" : ["What is a prefix?"],
+        "response" : ["A prefix is a group of letters added to the beginning of a word to change its meaning, such as 'un-' in 'unhappy'."]
+    },
+    {
+        "tag" : "a suffix",
+        "patterns" : ["What is a suffix?"],
+        "responses" : ["A suffix is a group of letters added to the end of a word to change its form, such as '-ly' in 'quickly'."]
+    },
+    {
+        "tag" : "compound word",
+        "patterns" : ["What is a compound word?"],
+        "responses" : [ "A compound word is formed when two or more words are combined to create a new word, such as 'toothbrush' or 'sunlight'."]
+    },
+    {
+        "tag" : "antonyms",
+        "patterns" : ["What are antonyms?"],
+        "responses" : ["Antonyms are words with opposite meanings, such as 'hot' and 'cold'."]
+    },
+    { 
+        "tag" : "clause",
+        "patterns" : ["what is a clause"],
+        "responses" : ["A clause is a group of words that contains a subject and a verb. It can be independent or dependent."]
+    },
+    { 
+        "tag" : "idiom",
+        "patterns" : ["What is an idiom?"],
+        "responses" : ["An idiom is a phrase or expression with a meaning that is not literal, such as 'it's raining cats and dogs'."]
+    },
+    { 
+        "tag" : "passive voice",
+        "patterns" : ["What is passive voice?"],
+        "responses" : ["Passive voice is when the subject of the sentence receives the action, such as 'The ball was kicked by John'."]
+    },
+    { 
+        "tag" : "active voice" ,
+        "patterns" : ["What is active voice?"],
+        "responses" : ["Active voice is when the subject of the sentence performs the action, such as 'John kicked the ball'."]
+    },
+    {
+        "tag" : " direct speech",
+        "patterns" : ["What is direct speech?"],
+        "responses" : ["Direct speech is when the exact words of a speaker are quoted in a sentence, usually enclosed in quotation marks."]
+    },
+    { 
+        "tag" : "indirect speech",
+        "patterns" : ["What is indirect speech?"],
+        "responses" :["Indirect speech is when the words of a speaker are reported without quoting them exactly, often using 'that'."]
+    },
+    { 
+        "tag" : "simile" ,
+        "patterns" : ["What is a simile?"],
+        "responses" : ["A simile is a figure of speech that compares two different things using the words 'like' or 'as', such as 'as brave as a lion'."]
+    },
+    {
+        "tag" : " metaphor",
+        "patterns" : ["What is a metaphor?"],
+        "responses" : ["A metaphor is a figure of speech that directly compares two different things by saying one is the other, such as 'Time is a thief'."]
+    },
+    {
+        "tag" : " oxymoron",
+        "patterns" : ["What is an oxymoron?"],
+        "responses" : ["An oxymoron is a figure of speech that combines two contradictory terms, such as 'deafening silence'."]
+    },
+    {
+        "tag" : "personification",
+        "patterns" : ["What is personification?"],
+        "responses" : ["Personification is a figure of speech where non-human objects or animals are given human characteristics, such as 'The wind whispered through the trees'."]
+    },
+    {
+        "tag" : " hyperbole",
+        "patterns" : [ "What is a hyperbole?"],
+        "responses" : ["Hyperbole is a figure of speech that involves extreme exaggeration for effect, such as 'I have a million things to do'."]
+    },
+    {
+        "tag" : "alliteration",
+        "patterns" : ["What is an alliteration?"],
+        "responses" : ["Alliteration is the repetition of the same initial consonant sounds in a series of words, such as 'She sells sea shells by the sea shore'."]
+    },
+    {
+        "tag" : "onomatopoeia",
+        "patterns" : ["What is onomatopoeia?"],
+        "responses" : ["Onomatopoeia refers to words that imitate natural sounds, such as 'buzz', 'clang', or 'meow'."]
+    },
+    { 
+        "tag" : "palindrome",
+        "patterns" : ["What is a palindrome?"],
+        "responses" : ["A palindrome is a word, phrase, or sequence that reads the same backward as forward, such as 'madam' or 'racecar'."]
+    },
+    {
+        "tag" : "acronym",
+        "patterns" : ["What is an acronym?"],
+        "responses" : ["An acronym is a word formed from the initial letters of a phrase, such as 'NASA' for 'National Aeronautics and Space Administration'."]
+    },
+    {
+        "tag" : " a synonym for 'happy'",
+        "patterns" : [ "What is a synonym for 'happy'?"],
+        "responses" : ["A synonym for 'happy' is 'joyful'."]
+    },
+    {
+        "tag" : "synonym for 'sad'",
+        "patterns" :["What is a synonym for 'sad'?"],
+        "responses" : [ "A synonym for 'sad' is 'unhappy'."]
+    },
+    {
+        "tag" : " plural of 'child'",
+        "patterns" : ["What is the plural of 'child'?"],
+        "responses" : ["The plural of 'child' is 'children'."]
+    },
+    { 
+        "tag" : "collective noun",
+        "patterns" :["What is an example of a collective noun?"],
+        "responses" : ["An example of a collective noun is 'team', which refers to a group of players."]
+    },
+     {
+        "tag": "courses",
+        "patterns": ["What courses are offered at PSG College of Technology?"],
+        "responses": ["PSG College of Technology offers undergraduate, postgraduate, and research programs in fields such as Engineering, Computer Science, Electrical, Civil, Mechanical, Management, and Applied Sciences."]
+    },
+    {
+        "tag": "admission",
+        "patterns": ["What is the admission process for PSG College of Technology?"],
+        "responses": ["The admission process for PSG College of Technology is based on the results of entrance exams such as TNEA for undergraduate courses and TANCET or GATE for postgraduate courses, along with eligibility criteria as set by the institution."]
+    },
+    {
+        "tag": "affiliated",
+        "patterns": ["Is PSG College of Technology affiliated with any university?"],
+        "responses": ["Yes, PSG College of Technology is affiliated with Anna University, Chennai."]
+    },
+    {
+        "tag": "hostel facilities",
+        "patterns": ["What are the hostel facilities at PSG College of Technology?"],
+        "responses": ["PSG College of Technology offers separate hostel facilities for both male and female students. The hostels are equipped with modern amenities such as Wi-Fi, common rooms, and mess facilities."]
+    },
+    {
+        "tag": "campus size",
+        "patterns": ["What is the campus size of PSG College of Technology?"],
+        "responses": ["PSG College of Technology has a sprawling campus of around 45 acres located in Coimbatore, Tamil Nadu."]
+    },
+    {
+        "tag": "placement statistics",
+        "patterns": ["What are the placement statistics for PSG College of Technology?"],
+        "responses" : ["PSG College of Technology has an excellent placement record with over 90% of students placed in top companies. The college has a dedicated placement cell that organizes interviews and training programs for students."]
+    },
+    {
+        "tag": "structure for undergraduate courses",
+        "patterns": ["What is the fee structure for undergraduate courses at PSG College of Technology?"],
+        "responses": ["The fee structure for undergraduate courses at PSG College of Technology varies depending on the course and category of admission. For detailed fee information, it is recommended to refer to the official college website."]
+    },
+    {
+        "tag": "apply for a course",
+        "patterns": ["How do I apply for a course at PSG College of Technology?"],
+        "responses": ["You can apply for courses at PSG College of Technology by filling out the online application form available on the official website and following the admission guidelines."]
+    },
+    {
+        "tag": "scholarships available",
+        "patterns": ["Are there any scholarships available at PSG College of Technology?"],
+        "responses": ["Yes, PSG College of Technology offers various scholarships based on academic performance, financial need, and other criteria. Scholarships are available for both undergraduate and postgraduate students."]
+    },
+    {
+        "tag": "extracurricular activities",
+        "patterns": ["What are the extracurricular activities available at PSG College of Technology?"],
+        "responses": ["PSG College of Technology offers a wide range of extracurricular activities including sports, cultural events, technical clubs, and social service initiatives. The college encourages students to participate in various activities to enhance their overall development."]
+    },
+    {
+        "tag": "courses are offered",
+        "patterns": ["What courses are offered at PSG Polytechnic College?"],
+        "responses": ["PSG Polytechnic College offers diploma courses in various engineering fields, including Mechanical Engineering, Electrical Engineering, Civil Engineering, Computer Science, and Electronics & Communication Engineering."]
+    },
+    {
+        "tag": "eligibility criteria",
+        "patterns": ["What is the eligibility criteria for admission to PSG Polytechnic College?"],
+        "responses": ["The eligibility criteria for admission to PSG Polytechnic College is typically completion of Class 10 (SSLC) with a minimum percentage as specified by the Tamil Nadu Directorate of Technical Education (TNDTE)."]
+    },
+    {
+        "tag": "apply for a diploma course",
+        "patterns": ["How do I apply for a diploma course at PSG Polytechnic College?"],
+        "responses": ["You can apply for a diploma course at PSG Polytechnic College through the official website by filling out the online application form during the admission period."]
+    },
+    {
+        "tag": "affiliated with any university",
+        "patterns": ["Is PSG Polytechnic College affiliated with any university?"],
+        "responses": ["Yes, PSG Polytechnic College is affiliated with the Directorate of Technical Education (DTE), Tamil Nadu."]
+    },
+    {
+        "tag": "hostel facilities available",
+        "patterns": ["What are the hostel facilities available at PSG Polytechnic College?"],
+        "responses": ["PSG Polytechnic College provides hostel facilities for both male and female students. The hostels are equipped with basic amenities like Wi-Fi, common rooms, and mess facilities."]
+    },
+    {
+        "tag": "campus size of PSG ",
+        "patterns": ["What is the campus size of PSG Polytechnic College?"],
+        "responses": ["PSG Polytechnic College is located on a 15-acre campus with modern classrooms, laboratories, and recreational areas."]
+    },
+    {
+        "tag": "placement record of PSG ",
+        "patterns": ["What is the placement record of PSG Polytechnic College?"],
+        "responses": ["Yes, PSG Polytechnic College offers scholarships based on academic performance, economic background, and merit. Scholarships are available for both diploma and postgraduate students."]
+    },
+    {
+        "tag": "extracurricular activities available at PSG",
+        "patterns": ["What are the extracurricular activities available at PSG Polytechnic College?"],
+        "responses": ["PSG Polytechnic College offers a variety of extracurricular activities including sports, cultural events, technical fests, and social service initiatives."]
+    },
+    {
+        "tag": "fee structure for diploma courses",
+        "patterns": ["What is the fee structure for diploma courses at PSG Polytechnic College?"],
+        "responses": ["the fee structure for diploma courses at PSG Polytechnic College varies depending on the course and category. You can find detailed fee information on the official PSG Polytechnic College website."]
+
+    },
+    {
+        "tag": "duration of the diploma courses at PSG",
+        "patterns": ["What is the duration of the diploma courses at PSG Polytechnic College?"],
+        "responses": ["The duration of diploma courses at PSG Polytechnic College is typically 3 years."]
+    },
+    {
+        "tag": "teaching quality",
+        "patterns": ["How is the teaching quality at PSG Polytechnic College?"],
+        "responses": ["PSG Polytechnic College is known for its high-quality teaching with experienced faculty members, state-of-the-art facilities, and a hands-on approach to learning."]
+    },
+    {
+        "tag": "derivative",
+        "patterns": ["What is an integral?"],
+        "responses": ["An integral represents the accumulation of quantities and can be used to calculate areas under curves."]
+    },
+    {
+        "tag": "power rule",
+        "patterns": ["What is the power rule?"],
+        "responses": ["The power rule states that the derivative of x^n is n*x^(n-1)."]
+    },
+    {
+       
+        "tag": "equation",
+        "patterns": ["What is an equation?"],
+        "responses": ["An equation is a mathematical statement that shows the equality of two expressions by using the '=' sign."]
+    },
+    {
+        "tag": "variable",
+        "patterns": ["What is a variable?"],
+        "responses": ["A variable is a symbol, often a letter, that represents an unknown value in mathematical expressions or equations."]
+    },
+    {
+       "tag": "quadratic formula",
+       "patterns": ["What is the quadratic formula"],
+       "responses": ["The quadratic formula is used to find the roots of a quadratic equation and is given by x = (-b ± √(b^2 - 4ac)) / 2a."]
+    },
+    {
+       "tag": "distributive property",
+       "patterns": ["What is the distributive property?"],
+       "responses": ["The distributive property states that a(b + c) = ab + ac."]
+    },
+    {
+      "tag": "linear equation",
+      "patterns": ["What is a linear equation?"],
+      "responses": ["A linear equation is an equation between two variables that produces a straight line when plotted on a graph."]
+    },
+    {
+       "tag": "factoring in algebra",
+       "patterns": ["What is factoring in algebra?"],
+       "responses": ["Factoring is the process of breaking down an equation or expression into products of simpler factors."]
+    },
+    {
+        "tag": "expression and an equation",
+        "patterns": ["What is the difference between an expression and an equation?"],
+        "responses": ["An expression is a mathematical phrase without an equality sign, while an equation includes an equality sign."]
+    },
+    {
+        "tag": "polynomial",
+        "patterns": ["What is a polynomial?"],
+        "responses": ["A polynomial is an algebraic expression that includes variables and coefficients, involving terms that are only non-negative integer powers of the variable."]
+    },
+    {
+        "tag": "like terms",
+        "patterns": ["What are like terms?"],
+        "responses": ["Like terms are terms in an expression that have the same variable raised to the same power."]
+    },
+    {
+        "tag": "slope-intercept form of a linear equation",
+        "patterns": ["What is the slope-intercept form of a linear equation?"],
+        "responses": ["The slope-intercept form is y = mx + b, where m is the slope and b is the y-intercept."]
+    },
+    {
+        "tag": "system of linear equations",
+        "patterns": ["How do you solve a system of linear equations?"],
+        "responses": ["Systems of linear equations can be solved using substitution, elimination, or graphing methods."]
+    },
+    {
+       "tag": "inequality",
+       "patterns": ["What is an inequality?"],
+       "responses": ["An inequality is a mathematical statement that compares two expressions using inequality symbols like <, >, ≤, or ≥."]
+    },
+    {
+        "tag": "triangle",
+        "patterns": ["What is a triangle?"],
+        "responses": ["A triangle is a polygon with three sides and three angles."]
+    },
+    {
+        "tag": "Pythagorean theorem",
+        "patterns": ["What is the Pythagorean theorem?"],
+        "responses": ["The Pythagorean theorem states that in a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides: a^2 + b^2 = c^2."]
+    },
+    {
+        "tag": "circle",
+        "patterns": ["What is a circle?"],
+        "responses": ["A circle is a shape consisting of all points in a plane that are a fixed distance from a center point."]
+    },
+    {
+        "tag": "area of a rectangle",
+        "patterns": ["What is the formula for the area of a rectangle?"],
+        "responses": ["The formula for the area of a rectangle is length × width."]
+    },
+    {
+        "tag": "parallelogram",
+        "patterns": ["What is a parallelogram?"],
+        "responses": ["A parallelogram is a four-sided figure with opposite sides that are parallel and equal in length."]
+    },
+    {
+        "tag": "interior angles of a polygon",
+        "patterns": ["What is the sum of the interior angles of a polygon?"],
+        "responses": ["The sum of the interior angles of a polygon is (n-2) × 180°, where n is the number of sides."]
+    },
+    {
+        "tag": "circumference of a circle",
+        "patterns": ["What is the formula for the circumference of a circle?"],
+        "responses": ["The circumference of a circle is 2πr, where r is the radius."]
+    },
+    {
+        "tag": "regular and an irregular polygon",
+        "patterns": ["What is the difference between a regular and an irregular polygon?"],
+        "responses": ["A regular polygon has all sides and angles equal, whereas an irregular polygon does not."]
+    },
+    {
+        "tag": "volume of a cylinder",
+        "patterns": ["What is the volume of a cylinder?"],
+        "responses": ["The volume of a cylinder is πr^2h, where r is the radius of the base and h is the height."]
+    },
+    {
+        "tag": "angle bisector",
+        "patterns": ["What is an angle bisector"],
+        "responses": ["An angle bisector is a line or ray that divides an angle into two equal parts."]
+    },
+    {
+        "tag": "limit",
+        "patterns": ["What is a limit?"],
+        "responses": ["A limit is the value that a function approaches as the input approaches a certain point."]
+    },
+    {
+        "tag": "fundamental theorem of calculus",
+        "patterns": ["What is the fundamental theorem of calculus?"],
+        "responses": ["The fundamental theorem of calculus links the concept of differentiation and integration, stating that differentiation and integration are inverse processes."]
+    },
+    {
+        "tag": "partial differentiation",
+        "patterns": ["What is partial differentiation?"],
+        "responses": ["Partial differentiation is the process of finding the derivative of a multivariable function with respect to one variable while keeping the others constant."]
+    }
+]
+}
+        
+
+        
+
+
+        
+
+
+
+
+
