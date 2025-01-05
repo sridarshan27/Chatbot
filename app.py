@@ -19,7 +19,7 @@ nltk.download("punkt")
 # # Stopwords initialization
 # stop_words = set(stopwords.words('english'))
 
-file_path = os.path.abspath("./intents.json")
+file_path = os.path.abspath("C:\\Users\\Admin\\Documents\\intents.json")
 with open(file_path, "r") as file:
     intents = json.load(file)
 
