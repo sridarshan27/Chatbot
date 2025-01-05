@@ -9,29 +9,43 @@ import random
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
+# Disable SSL certificate verification for NLTK downloads
 ssl._create_default_https_context = ssl._create_unverified_context
+
+# Set NLTK data path and download required data
 nltk.data.path.append(os.path.abspath("nltk_data"))
-nltk.download('punkt')
+nltk.download('punkt', quiet=True)
 
 # Load intents from the JSON file
 file_path = os.path.abspath("C:\\Users\\Admin\\Documents\\intents.json")
-with open(file_path, "r") as file:
-    intents = json.load(file)
+try:
+    with open(file_path, "r") as file:
+        intents = json.load(file)
+except FileNotFoundError:
+    st.error("The 'intents.json' file was not found. Please ensure it is in the specified directory.")
+    st.stop()
+except json.JSONDecodeError:
+    st.error("The 'intents.json' file is not properly formatted. Please check its content.")
+    st.stop()
 
 # Create the vectorizer and classifier
 vectorizer = TfidfVectorizer()
 clf = LogisticRegression(random_state=0, max_iter=10000)
 
-tags = []  # Corrected variable name
-all_patterns = []  # Corrected variable name
-
+# Preprocess the data
+tags = []
+all_patterns = []
 for intent in intents:
-    for pattern in intent["patterns"]:  # Corrected key for patterns
-        all_patterns.append(pattern)  # Corrected variable name
-        tags.append(intent["tag"])  # Corrected variable name
+    try:
+        patterns = intent.get("patterns", [])
+        tag = intent.get("tag", "unknown")
+        all_patterns.extend(patterns)
+        tags.extend([tag] * len(patterns))
+    except Exception as e:
+        print(f"Error processing intent: {intent}. Exception: {e}")
 
 # Training the model
-x = vectorizer.fit_transform(all_patterns)  # Corrected variable
+x = vectorizer.fit_transform(all_patterns)
 y = tags
 clf.fit(x, y)
 
@@ -40,8 +54,7 @@ def chatbot(input_text):
     tag = clf.predict(input_text)[0]
     for intent in intents:
         if intent['tag'] == tag:
-            response = random.choice(intent['responses'])
-            return response
+            return random.choice(intent['responses'])
 
 counter = 0
 
@@ -53,7 +66,6 @@ def main():
     menu = ["Home", "Conversation History", "About"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    # Home Menu
     if choice == "Home":
         st.write("Welcome to the chatbot. Please type a message and press Enter to start the conversation.")
 
@@ -85,7 +97,6 @@ def main():
                 st.write("Thank you for chatting with me. Have a great day!")
                 st.stop()
 
-    # Conversation History Menu
     elif choice == "Conversation History":
         st.header("Conversation History")
         # Display the conversation history in a collapsible expander
@@ -107,7 +118,7 @@ def main():
 
         st.write("""
         The project is divided into two parts:
-        1. NLP techniques and Logistic Regression algorithm is used to train the chatbot on labeled intents and entities.
+        1. NLP techniques and Logistic Regression algorithm are used to train the chatbot on labeled intents and entities.
         2. For building the Chatbot interface, Streamlit web framework is used to build a web-based chatbot interface. The interface allows users to input text and receive responses from the chatbot.
         """)
 
