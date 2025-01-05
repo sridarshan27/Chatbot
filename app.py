@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 ssl._create_default_https_context = ssl._create_unverified_context
-nltk.data.path.append(os.path.abspath("nltk_data"))
+nltk.data.path.append(os.path.abspath("C:\\Users\\Admin\\Documents\\intents.json"))
 nltk.download('punkt')
 
 # Load intents from the JSON file
