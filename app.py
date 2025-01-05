@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 ssl._create_default_https_context = ssl._create_unverified_context
-nltk.data.path.append(os.path.abspath("C:\\Users\\Admin\\Documents\\intents.json"))
+nltk.data.path.append(os.path.abspath("nltk_data"))
 nltk.download('punkt')
 
 # Load intents from the JSON file
@@ -24,22 +24,14 @@ clf = LogisticRegression(random_state=0, max_iter=10000)
 
 # Preprocess the data
 tags = []
-patterns = []
+all_pattern = []
 for intent in intents:
-    try:
-        # Ensure 'patterns' and 'tag' exist and are valid
-        intent_patterns = intent.get('patterns', [])
-        intent_tag = intent.get('tag', 'unknown')
-
-        # Append valid patterns and tags
-        for pattern in intent_patterns:
-            tags.append(intent_tag)
-            patterns.append(pattern)
-    except Exception as e:
-        print(f"Error processing intent: {intent}. Exception: {e}")
+    for pattern in intent["pattern"]:
+        all_pattern.append(pattern)
+        tags.append(intent["tag"])
 
 # training the model
-x = vectorizer.fit_transform(patterns)
+x = vectorizer.fit_transform(pattern)
 y = tags
 clf.fit(x, y)
 
