@@ -26,9 +26,17 @@ clf = LogisticRegression(random_state=0, max_iter=10000)
 tags = []
 patterns = []
 for intent in intents:
-    for pattern in intent['patterns']:
-        tags.append(intent['tag'])
-        patterns.append(pattern)
+    try:
+        # Ensure 'patterns' and 'tag' exist and are valid
+        intent_patterns = intent.get('patterns', [])
+        intent_tag = intent.get('tag', 'unknown')
+
+        # Append valid patterns and tags
+        for pattern in intent_patterns:
+            tags.append(intent_tag)
+            patterns.append(pattern)
+    except Exception as e:
+        print(f"Error processing intent: {intent}. Exception: {e}")
 
 # training the model
 x = vectorizer.fit_transform(patterns)
